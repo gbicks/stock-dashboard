@@ -1,8 +1,5 @@
 # Stock Dashboard
 
-## TODO
-
-Source of truth: [TODO.md](TODO.md)
 
 ## Purpose
 
