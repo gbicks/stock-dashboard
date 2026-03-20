@@ -105,10 +105,14 @@ function displayChart(data) {
                 label: `${data.ticker} - Last 30 Days`,
                 data: data.closes,
                 borderColor: '#325893',
+                backgroundColor: 'rgba(50, 88, 147, 0.05)',
                 borderWidth: 1.5,
                 fill: false,
                 tension: 0,
                 pointRadius: 0,
+                pointBackgroundColor: '#325893',
+                pointBorderColor: '#fff',
+                pointBorderWidth: 1,
                 pointHoverRadius: 2,
             }]
         },
@@ -124,12 +128,24 @@ function displayChart(data) {
                 legend: {
                     display: false,
                     position: 'top',
+                    labels: {
+                        color: '#000',
+                        boxWidth: 14,
+                        boxHeight: 6,
+                        usePointStyle: false,
+                        font: {
+                            family: FONT_MONO,
+                            size: 11,
+                            weight: '600'
+                        }
+                    }
                 }
             },
             scales: {
                 x: {
                     grid: {
                         display: false,
+                        color: 'rgba(0, 0, 0, 0.08)',
                         tickLength: 4,
                     },
                     border: {
@@ -164,6 +180,16 @@ function displayChart(data) {
                             family: FONT_MONO,
                             size: 10,
                             weight: '500'
+                        }
+                    },
+                    title: {
+                        display: false,
+                        text: 'Price (USD)',
+                        color: '#000',
+                        font: {
+                            family: FONT_MONO,
+                            size: 11,
+                            weight: '700'
                         }
                     }
                 }
