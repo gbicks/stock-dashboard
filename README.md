@@ -14,6 +14,13 @@ pip install -r requirements.txt
 python app.py
 ```
 
+Optional: write server output to a file in `logs/`:
+
+```bash
+mkdir -p logs
+python app.py > logs/flask.log 2>&1
+```
+
 Open [index.html](index.html) in a browser.
 
 ## API
@@ -37,6 +44,7 @@ curl http://localhost:5001/api/health
 - [styles.css](styles.css): styles
 - [script.js](script.js): frontend logic
 - [requirements.txt](requirements.txt): dependencies
+- [logs/.gitkeep](logs/.gitkeep): keeps log folder in git
 
 ## Notes
 
