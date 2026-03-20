@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template, request
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 import yfinance as yf
 from datetime import datetime, timedelta
@@ -7,12 +7,6 @@ import random
 
 app = Flask(__name__)
 CORS(app)
-
-
-@app.route('/', methods=['GET'])
-def index():
-    """Serve the dashboard UI"""
-    return render_template('index.html')
 
 # Mock data for demo when yfinance fails
 MOCK_STOCKS = {
