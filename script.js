@@ -11,6 +11,9 @@ const stockCard = document.getElementById('stockCard');
 const chartContainer = document.getElementById('chartContainer');
 const quickBtns = document.querySelectorAll('.quick-btn');
 const dataSource = document.getElementById('dataSource');
+const watchlistBody = document.getElementById('watchlistBody');
+
+const WATCHLIST_TICKERS = ['AAPL', 'MSFT', 'NVDA', 'AMZN', 'TSLA'];
 
 // Event listeners
 searchBtn.addEventListener('click', () => handleSearch(tickerInput.value));
@@ -227,8 +230,61 @@ function formatNumber(num) {
     return num.toFixed(2);
 }
 
+function formatPrice(value) {
+    if (typeof value !== 'number') return '-';
+    return `$${value.toFixed(2)}`;
+}
+
+function renderWatchlistRows(rows) {
+    if (!watchlistBody) return;
+
+    watchlistBody.innerHTML = rows.map((row) => `
+        <tr data-ticker="${row.ticker}">
+            <td>${row.displayName}</td>
+            <td>${formatPrice(row.lastPrice)}</td>
+            <td>${formatPrice(row.previousClose)}</td>
+        </tr>
+    `).join('');
+}
+
+function renderWatchlistLoading() {
+    renderWatchlistRows(WATCHLIST_TICKERS.map((ticker) => ({
+        ticker,
+        displayName: `${ticker} (loading...)`,
+        lastPrice: null,
+        previousClose: null,
+    })));
+}
+
+async function fetchWatchlistData() {
+    if (!watchlistBody) return;
+
+    renderWatchlistLoading();
+
+    try {
+        const query = encodeURIComponent(WATCHLIST_TICKERS.join(','));
+        const response = await fetch(`${API_BASE_URL}/watchlist?tickers=${query}`);
+        const data = await response.json();
+
+        if (!response.ok || !Array.isArray(data.rows)) {
+            throw new Error(data.error || 'Watchlist request failed');
+        }
+
+        renderWatchlistRows(data.rows);
+    } catch (error) {
+        renderWatchlistRows(WATCHLIST_TICKERS.map((ticker) => ({
+            ticker,
+            displayName: `${ticker} (unavailable)`,
+            lastPrice: null,
+            previousClose: null,
+        })));
+    }
+}
+
 // Check API health on page load
 window.addEventListener('load', async () => {
+    await fetchWatchlistData();
+
     try {
         const response = await fetch(`${API_BASE_URL}/health`);
         if (!response.ok) {

@@ -217,6 +217,63 @@ body {
     display: none;
 }
 
+.watchlist-card {
+    border-top: 1px solid var(--line);
+    padding: 12px 0 10px;
+    margin-bottom: 14px;
+}
+
+.watchlist-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.watchlist-header h3 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.watchlist-note {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--text);
+    opacity: 0.72;
+}
+
+.watchlist-table-wrap {
+    overflow-x: auto;
+}
+
+.watchlist-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-mono);
+    font-size: 0.86rem;
+}
+
+.watchlist-table th,
+.watchlist-table td {
+    border-bottom: 1px solid var(--line);
+    padding: 8px 6px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.watchlist-table th {
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.watchlist-table td:nth-child(2),
+.watchlist-table td:nth-child(3) {
+    text-align: right;
+}
+
 #priceChart {
     height: 260px !important;
 }
@@ -270,6 +327,11 @@ body {
 
     .stock-details {
         grid-template-columns: 1fr;
+    }
+
+    .watchlist-header {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .quick-btn {

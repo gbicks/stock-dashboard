@@ -78,6 +78,46 @@ def provider_failure_response(ticker, message):
     }), 503
 
 
+def build_live_stock_payload(ticker, hist, stock):
+    current_price = float(hist['Close'].iloc[-1])
+    previous_close = float(hist['Close'].iloc[-2]) if len(hist) > 1 else current_price
+
+    company_name = ticker
+    display_name = ticker
+    market_cap = 'N/A'
+    pe_ratio = 'N/A'
+
+    try:
+        info = stock.info
+        company_name = info.get('longName') or info.get('shortName') or ticker
+        display_name = info.get('shortName') or company_name
+
+        raw_market_cap = info.get('marketCap')
+        if isinstance(raw_market_cap, (int, float)):
+            market_cap = raw_market_cap
+
+        raw_pe_ratio = info.get('trailingPE')
+        if isinstance(raw_pe_ratio, (int, float)):
+            pe_ratio = round(float(raw_pe_ratio), 2)
+    except Exception:
+        pass
+
+    return {
+        'ticker': ticker,
+        'display_name': display_name,
+        'current_price': round(current_price, 2),
+        'previous_close': round(previous_close, 2),
+        'company_name': company_name,
+        'currency': 'USD',
+        'market_cap': market_cap,
+        'pe_ratio': pe_ratio,
+        'source': 'yfinance',
+        'is_live': True,
+        'provider_error': None,
+        'timestamp': datetime.now().isoformat(),
+    }
+
+
 def mock_stock_response(ticker, provider_error):
     mock = MOCK_STOCKS[ticker]
     price = mock['price'] + random.uniform(-5, 5)
@@ -126,27 +166,7 @@ def get_stock(ticker):
             provider_error = history_error
 
         if hist is not None and not hist.empty:
-            current_price = float(hist['Close'].iloc[-1])
-            company_name = ticker
-
-            try:
-                info = stock.info
-                company_name = info.get('longName') or ticker
-            except Exception:
-                pass
-
-            return jsonify({
-                'ticker': ticker,
-                'current_price': round(current_price, 2),
-                'company_name': company_name,
-                'currency': 'USD',
-                'market_cap': 'N/A',
-                'pe_ratio': 'N/A',
-                'source': 'yfinance',
-                'is_live': True,
-                'provider_error': None,
-                'timestamp': datetime.now().isoformat()
-            })
+            return jsonify(build_live_stock_payload(ticker, hist, stock))
     except Exception as exc:
         provider_error = str(exc)
 
@@ -189,6 +209,57 @@ def get_stock_history(ticker):
         return mock_history_response(ticker, days, provider_error)
 
     return provider_failure_response(ticker, provider_error)
+
+
+@app.route('/api/watchlist', methods=['GET'])
+def get_watchlist():
+    """Fetch compact watchlist rows for a list of tickers."""
+    tickers_param = request.args.get('tickers', '')
+    if tickers_param.strip():
+        tickers = [item.strip().upper() for item in tickers_param.split(',') if item.strip()]
+    else:
+        tickers = ['AAPL', 'MSFT', 'NVDA', 'AMZN', 'TSLA']
+
+    tickers = tickers[:10]
+    rows = []
+
+    for ticker in tickers:
+        provider_error = 'Yahoo Finance returned no price history.'
+        try:
+            hist, stock, history_error = fetch_live_history(ticker, days=5)
+            if history_error:
+                provider_error = history_error
+
+            if hist is not None and not hist.empty:
+                payload = build_live_stock_payload(ticker, hist, stock)
+                rows.append({
+                    'ticker': payload['ticker'],
+                    'displayName': payload['display_name'],
+                    'lastPrice': payload['current_price'],
+                    'previousClose': payload['previous_close'],
+                    'is_live': True,
+                    'source': payload['source'],
+                    'provider_error': None,
+                })
+                continue
+        except Exception as exc:
+            provider_error = str(exc)
+
+        rows.append({
+            'ticker': ticker,
+            'displayName': ticker,
+            'lastPrice': None,
+            'previousClose': None,
+            'is_live': False,
+            'source': 'yfinance',
+            'provider_error': provider_error,
+        })
+
+    return jsonify({
+        'rows': rows,
+        'source': 'yfinance',
+        'timestamp': datetime.now().isoformat(),
+    })
 
 @app.route('/api/health', methods=['GET'])
 def health():

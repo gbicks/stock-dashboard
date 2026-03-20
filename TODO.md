@@ -3,7 +3,8 @@
 Updated: 2026-03-20
 
 ## Up next
-- [ ] Build two-section layout as top priority: (1) single-stock quote with extra detail, (2) small live-only watchlist (1 to 2 additional tickers).
+- [ ] Build watchlist first (top priority): mock up a 5-stock table with displayName, lastPrice, previousClose for AAPL, MSFT, NVDA, AMZN, TSLA.
+- [ ] Build two-section layout: (1) single-stock quote with extra detail, (2) live watchlist section.
 - [x] Get live data active (Yahoo Finance requests succeeding reliably).
 - [ ] what other data can i get from yfinance
 - [ ] Explore backend data: audit API responses and surface any useful unused fields.
