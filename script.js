@@ -10,6 +10,7 @@ const errorDiv = document.getElementById('error');
 const stockCard = document.getElementById('stockCard');
 const chartContainer = document.getElementById('chartContainer');
 const quickBtns = document.querySelectorAll('.quick-btn');
+const dataSource = document.getElementById('dataSource');
 
 // Event listeners
 searchBtn.addEventListener('click', () => handleSearch(tickerInput.value));
@@ -40,15 +41,15 @@ async function handleSearch(ticker) {
 async function fetchStockData(ticker) {
     try {
         const response = await fetch(`${API_BASE_URL}/stock/${ticker}`);
-        
+
+        const data = await response.json();
+
         if (!response.ok) {
-            const errorData = await response.json();
-            showError(errorData.error || 'Stock not found');
+            showProviderError(data);
             hideStockCard();
             return;
         }
 
-        const data = await response.json();
         displayStockData(data);
         await fetchAndDisplayChart(ticker);
     } catch (error) {
@@ -61,6 +62,7 @@ function displayStockData(data) {
     document.getElementById('companyName').textContent = data.company_name;
     document.getElementById('ticker').textContent = data.ticker;
     document.getElementById('currentPrice').textContent = `$${data.current_price}`;
+    setDataSourceStatus(data);
     
     document.getElementById('marketCap').textContent = 
         data.market_cap !== 'N/A' ? formatNumber(data.market_cap) : 'N/A';
@@ -77,16 +79,18 @@ function displayStockData(data) {
 async function fetchAndDisplayChart(ticker) {
     try {
         const response = await fetch(`${API_BASE_URL}/stock/${ticker}/history?days=30`);
-        
+        const data = await response.json();
+
         if (!response.ok) {
-            console.error('Error fetching chart data');
+            showProviderError(data, 'History unavailable');
+            chartContainer.classList.add('hidden');
             return;
         }
 
-        const data = await response.json();
         displayChart(data);
     } catch (error) {
-        console.error('Error fetching chart data:', error);
+        showError(`History unavailable. ${error.message}`);
+        chartContainer.classList.add('hidden');
     }
 }
 
@@ -179,6 +183,13 @@ function showError(message) {
     errorDiv.classList.remove('hidden');
 }
 
+const SOURCE_NAMES = { 'yfinance': 'Yahoo Finance' };
+
+function showProviderError(data, fallbackMessage = 'Failed to load data') {
+    const message = data.error || fallbackMessage;
+    showError(message);
+}
+
 function hideError() {
     errorDiv.classList.add('hidden');
 }
@@ -186,6 +197,26 @@ function hideError() {
 function hideStockCard() {
     stockCard.classList.add('hidden');
     chartContainer.classList.add('hidden');
+    dataSource.textContent = '';
+    dataSource.className = 'data-source';
+}
+
+function setDataSourceStatus(data) {
+    if (data.is_live) {
+        dataSource.textContent = 'Live data: Yahoo Finance';
+        dataSource.className = 'data-source live';
+        return;
+    }
+
+    if (data.source === 'mock') {
+        dataSource.textContent = 'Demo data: development fallback';
+        dataSource.className = 'data-source demo';
+        return;
+    }
+
+    const sourceName = SOURCE_NAMES[data.source] || data.source || 'unknown';
+    dataSource.textContent = `Failed to load data from ${sourceName}`;
+    dataSource.className = 'data-source unavailable';
 }
 
 function formatNumber(num) {

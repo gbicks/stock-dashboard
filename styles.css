@@ -149,6 +149,23 @@ body {
     margin-bottom: 0;
 }
 
+.data-source {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    margin-top: 4px;
+    margin-bottom: 2px;
+}
+
+.data-source.live {
+    color: var(--primary);
+}
+
+.data-source.demo,
+.data-source.unavailable {
+    color: var(--text);
+}
+
 .timestamp {
     font-family: var(--font-mono);
     font-size: 0.76rem;

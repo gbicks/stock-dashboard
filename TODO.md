@@ -3,10 +3,12 @@
 Updated: 2026-03-20
 
 ## Up next
-
+- get rid of mock stock data. is this necessary?
+- [] what other data can i get from yfinance
+- [ ] Explore backend data: audit API responses and surface any useful unused fields.
+    - [ ] create a database file in git that i can reference?
 - [ ] Ticker watchlist: persistent list of 5 to 10 names that always shows price, previous close, and daily percent change on page load.
 - [x] Organize asset files: review project structure and move files into logical folders (for example static and src).
-- [ ] Explore backend data: audit API responses and surface any useful unused fields.
 
 ## Design
 

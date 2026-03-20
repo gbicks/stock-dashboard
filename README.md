@@ -49,4 +49,5 @@ curl http://localhost:5001/api/health
 ## Notes
 
 - Backend runs on port `5001`.
-- `yfinance` can fail locally/network-dependent; app falls back to demo data for selected tickers.
+- Mock/demo data is off by default. To enable it during development only, run `ENABLE_MOCK_DATA=true python app.py`.
+- If `yfinance` fails and mock mode is off, the app returns no data and an explicit provider failure instead of silently substituting demo values.
