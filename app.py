@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 import yfinance as yf
 
@@ -11,6 +11,8 @@ load_dotenv()
 
 app = Flask(__name__)
 CORS(app)
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 ENABLE_MOCK_DATA = os.getenv('ENABLE_MOCK_DATA', '').lower() in {'1', 'true', 'yes', 'on'}
 
@@ -153,6 +155,21 @@ def mock_history_response(ticker, days, provider_error):
         'provider_error': provider_error,
         'timestamp': datetime.now().isoformat(),
     })
+
+
+@app.route('/')
+def serve_index():
+    return send_from_directory(BASE_DIR, 'index.html')
+
+
+@app.route('/styles.css')
+def serve_stylesheet():
+    return send_from_directory(BASE_DIR, 'styles.css')
+
+
+@app.route('/script.js')
+def serve_script():
+    return send_from_directory(BASE_DIR, 'script.js')
 
 @app.route('/api/stock/<ticker>', methods=['GET'])
 def get_stock(ticker):

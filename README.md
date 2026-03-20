@@ -21,7 +21,16 @@ mkdir -p logs
 python app.py > logs/flask.log 2>&1
 ```
 
-Open [index.html](index.html) in a browser.
+Open http://localhost:5001 in a browser.
+
+## Deploy
+
+This project is set up to deploy as a single Render web service.
+
+1. Push the repo to GitHub.
+2. In Render, create a new Web Service from the repo.
+3. Render will detect [render.yaml](/Users/glennbickley/Documents/stock-dashboard/render.yaml).
+4. The app will be served from the service root, and the API remains available under `/api/*`.
 
 ## Explore Available Data
 
@@ -54,11 +63,12 @@ curl http://localhost:5001/api/health
 
 ## Files
 
-- [app.py](app.py): Flask API
+- [app.py](app.py): Flask app serving both the UI and API
 - [index.html](index.html): UI markup
 - [styles.css](styles.css): styles
 - [script.js](script.js): frontend logic
 - [requirements.txt](requirements.txt): dependencies
+- [render.yaml](render.yaml): Render deployment config
 - [scripts/audit_yfinance_fields.py](scripts/audit_yfinance_fields.py): yfinance field audit tool
 - [logs/.gitkeep](logs/.gitkeep): keeps log folder in git
 
