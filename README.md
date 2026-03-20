@@ -4,7 +4,8 @@
 
 Source of truth: [TODO.md](TODO.md)
 
-- Ticker watchlist with persistence
+- Ticker watchlist with persistence. 
+- what's the best way to make changes to the watchlist?
 - Asset/file organization review
 - API data audit for additional fields
 
