@@ -23,6 +23,50 @@ MOCK_STOCKS = {
 }
 
 
+def fetch_live_history(ticker, days):
+    """Fetch daily OHLC history from Yahoo Finance with fallback query paths."""
+    max_days = max(days, 5)
+    periods = [f'{max_days}d', '1mo', '3mo', '1y']
+    errors = []
+
+    stock = yf.Ticker(ticker)
+
+    for period in periods:
+        try:
+            hist = stock.history(
+                period=period,
+                interval='1d',
+                auto_adjust=False,
+                prepost=False,
+                actions=False,
+            )
+            if not hist.empty and 'Close' in hist.columns:
+                return hist, stock, None
+        except Exception as exc:
+            errors.append(f'history({period}): {exc}')
+
+    for period in periods:
+        try:
+            hist = yf.download(
+                tickers=ticker,
+                period=period,
+                interval='1d',
+                auto_adjust=False,
+                progress=False,
+                threads=False,
+                group_by='column',
+            )
+            if not hist.empty and 'Close' in hist.columns:
+                return hist, stock, None
+        except Exception as exc:
+            errors.append(f'download({period}): {exc}')
+
+    if errors:
+        return None, stock, '; '.join(errors)
+
+    return None, stock, 'Yahoo Finance returned no price history.'
+
+
 def provider_failure_response(ticker, message):
     return jsonify({
         'ticker': ticker,
@@ -77,10 +121,11 @@ def get_stock(ticker):
     provider_error = 'Yahoo Finance returned no price history.'
 
     try:
-        stock = yf.Ticker(ticker)
-        hist = stock.history(period='1y')
+        hist, stock, history_error = fetch_live_history(ticker, days=30)
+        if history_error:
+            provider_error = history_error
 
-        if not hist.empty:
+        if hist is not None and not hist.empty:
             current_price = float(hist['Close'].iloc[-1])
             company_name = ticker
 
@@ -119,10 +164,11 @@ def get_stock_history(ticker):
     provider_error = 'Yahoo Finance returned no price history.'
 
     try:
-        stock = yf.Ticker(ticker)
-        hist = stock.history(period='1y')
+        hist, _stock, history_error = fetch_live_history(ticker, days)
+        if history_error:
+            provider_error = history_error
 
-        if not hist.empty:
+        if hist is not None and not hist.empty:
             data = {
                 'ticker': ticker,
                 'dates': hist.index.strftime('%Y-%m-%d').tolist()[-days:],
