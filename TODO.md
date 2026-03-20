@@ -4,7 +4,7 @@ Updated: 2026-03-20
 
 ## Up next
 - [ ] Get live data active (Yahoo Finance requests succeeding reliably).
-- [] what other data can i get from yfinance
+- [ ] what other data can i get from yfinance
 - [ ] Explore backend data: audit API responses and surface any useful unused fields.
     - [ ] create a database file in git that i can reference?
 - [ ] Ticker watchlist: persistent list of 5 to 10 names that always shows price, previous close, and daily percent change on page load.
