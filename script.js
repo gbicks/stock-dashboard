@@ -1,5 +1,4 @@
 const API_BASE_URL = 'http://localhost:5001/api';
-const FONT_MONO = getComputedStyle(document.documentElement).getPropertyValue('--font-mono').trim();
 
 let chart = null;
 
@@ -104,93 +103,32 @@ function displayChart(data) {
             datasets: [{
                 label: `${data.ticker} - Last 30 Days`,
                 data: data.closes,
-                borderColor: '#325893',
-                backgroundColor: 'rgba(50, 88, 147, 0.05)',
-                borderWidth: 1.5,
-                fill: false,
-                tension: 0,
-                pointRadius: 0,
-                pointBackgroundColor: '#325893',
+                borderColor: '#667eea',
+                backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.4,
+                pointRadius: 3,
+                pointBackgroundColor: '#667eea',
                 pointBorderColor: '#fff',
-                pointBorderWidth: 1,
-                pointHoverRadius: 2,
+                pointBorderWidth: 2,
+                pointHoverRadius: 5,
             }]
         },
         options: {
-            animation: false,
             responsive: true,
-            maintainAspectRatio: false,
-            interaction: {
-                mode: 'index',
-                intersect: false,
-            },
             plugins: {
                 legend: {
-                    display: false,
+                    display: true,
                     position: 'top',
-                    labels: {
-                        color: '#000',
-                        boxWidth: 14,
-                        boxHeight: 6,
-                        usePointStyle: false,
-                        font: {
-                            family: FONT_MONO,
-                            size: 11,
-                            weight: '600'
-                        }
-                    }
                 }
             },
             scales: {
-                x: {
-                    grid: {
-                        display: false,
-                        color: 'rgba(0, 0, 0, 0.08)',
-                        tickLength: 4,
-                    },
-                    border: {
-                        color: 'rgba(0, 0, 0, 0.2)',
-                        width: 1,
-                    },
-                    ticks: {
-                        color: '#000',
-                        autoSkip: true,
-                        maxTicksLimit: 8,
-                        maxRotation: 0,
-                        font: {
-                            family: FONT_MONO,
-                            size: 10,
-                            weight: '500'
-                        }
-                    }
-                },
                 y: {
                     beginAtZero: false,
-                    grid: {
-                        color: 'rgba(0, 0, 0, 0.08)',
-                        tickLength: 4,
-                    },
-                    border: {
-                        color: 'rgba(0, 0, 0, 0.2)',
-                        width: 1,
-                    },
-                    ticks: {
-                        color: '#000',
-                        font: {
-                            family: FONT_MONO,
-                            size: 10,
-                            weight: '500'
-                        }
-                    },
                     title: {
-                        display: false,
-                        text: 'Price (USD)',
-                        color: '#000',
-                        font: {
-                            family: FONT_MONO,
-                            size: 11,
-                            weight: '700'
-                        }
+                        display: true,
+                        text: 'Price (USD)'
                     }
                 }
             }

@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Serif:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
+        <header>
+            <h1>📈 Stock Dashboard</h1>
+            <p class="subtitle">Real-time stock data at your fingertips</p>
+        </header>
+
         <div class="search-section">
             <input 
                 type="text" 
@@ -18,7 +20,7 @@
                 placeholder="Enter stock ticker (e.g., AAPL, GOOGL, MSFT)"
                 autocomplete="off"
             >
-            <button id="searchBtn" aria-label="Search"></button>
+            <button id="searchBtn">Search</button>
         </div>
 
         <div id="error" class="error hidden"></div>
