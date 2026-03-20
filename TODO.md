@@ -18,6 +18,7 @@ Updated: 2026-03-20
 
 ## Decisions
 
+- 2026-03-20: Watchlist contract fields selected: displayName, lastPrice, previousClose (see data/selected_fields.json).
 - 2026-03-20: Data provenance v1 shipped: live-only by default, explicit 503 on failure, ENABLE_MOCK_DATA dev flag, provenance fields on all responses.
 - 2026-03-20: Removed title/subtitle, switched to white background, set primary accent to #325893.
 - 2026-03-20: Shifted to terminal aesthetic (monospace, square controls, no shadows, no animation).

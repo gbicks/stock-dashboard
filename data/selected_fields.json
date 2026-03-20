@@ -1,0 +1,48 @@
+{
+  "updated": "2026-03-20",
+  "notes": [
+    "Field contract for UI sections.",
+    "api_field is what backend should return.",
+    "source_field is the preferred yfinance source key."
+  ],
+  "sections": {
+    "watchlist": {
+      "description": "Small live-only watchlist table",
+      "columns": [
+        {
+          "id": "displayName",
+          "label": "Name",
+          "api_field": "displayName",
+          "required": true,
+          "fallback": "ticker",
+          "source": {
+            "object": "info",
+            "field": "shortName"
+          }
+        },
+        {
+          "id": "lastPrice",
+          "label": "Last",
+          "api_field": "lastPrice",
+          "required": true,
+          "fallback": null,
+          "source": {
+            "object": "info",
+            "field": "regularMarketPrice"
+          }
+        },
+        {
+          "id": "previousClose",
+          "label": "Prev Close",
+          "api_field": "previousClose",
+          "required": true,
+          "fallback": null,
+          "source": {
+            "object": "info",
+            "field": "regularMarketPreviousClose"
+          }
+        }
+      ]
+    }
+  }
+}
