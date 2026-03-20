@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📈 Stock Dashboard</h1>
+            <p class="subtitle">Real-time stock data at your fingertips</p>
+        </header>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="tickerInput" 
+                placeholder="Enter stock ticker (e.g., AAPL, GOOGL, MSFT)"
+                autocomplete="off"
+            >
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="error" class="error hidden"></div>
+
+        <div id="stockCard" class="stock-card hidden">
+            <div class="stock-header">
+                <div>
+                    <h2 id="companyName"></h2>
+                    <p id="ticker" class="ticker-label"></p>
+                </div>
+                <div class="price-section">
+                    <div id="currentPrice" class="price">-</div>
+                    <p id="lastUpdated" class="timestamp"></p>
+                </div>
+            </div>
+
+            <div class="stock-details">
+                <div class="detail-row">
+                    <span class="label">Market Cap:</span>
+                    <span id="marketCap" class="value">-</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">P/E Ratio:</span>
+                    <span id="peRatio" class="value">-</span>
+                </div>
+                <div class="detail-row">
+                    <span class="label">Currency:</span>
+                    <span id="currency" class="value">-</span>
+                </div>
+            </div>
+        </div>
+
+        <div id="chartContainer" class="chart-container hidden">
+            <canvas id="priceChart"></canvas>
+        </div>
+
+        <div class="quick-links">
+            <p>Quick search:</p>
+            <button class="quick-btn" data-ticker="AAPL">Apple (AAPL)</button>
+            <button class="quick-btn" data-ticker="GOOGL">Google (GOOGL)</button>
+            <button class="quick-btn" data-ticker="MSFT">Microsoft (MSFT)</button>
+            <button class="quick-btn" data-ticker="TSLA">Tesla (TSLA)</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
