@@ -3,11 +3,12 @@
 Updated: 2026-03-20
 
 ## Up next
-- [ ] Get live data active (Yahoo Finance requests succeeding reliably).
+- [ ] Build two-section layout as top priority: (1) single-stock quote with extra detail, (2) small live-only watchlist (1 to 2 additional tickers).
+- [x] Get live data active (Yahoo Finance requests succeeding reliably).
 - [ ] what other data can i get from yfinance
 - [ ] Explore backend data: audit API responses and surface any useful unused fields.
     - [ ] create a database file in git that i can reference?
-- [ ] Ticker watchlist: persistent list of 5 to 10 names that always shows price, previous close, and daily percent change on page load.
+- [ ] Future expansion: grow the watchlist from 1 to 2 symbols up to 5 to 10 symbols with price, previous close, and daily percent change on page load.
 - [x] Organize asset files: review project structure and move files into logical folders (for example static and src).
 
 ## Design

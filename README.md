@@ -23,6 +23,21 @@ python app.py > logs/flask.log 2>&1
 
 Open [index.html](index.html) in a browser.
 
+## Explore Available Data
+
+Run the field audit script to inventory what `yfinance` returns across representative tickers:
+
+```bash
+source venv/bin/activate
+python scripts/audit_yfinance_fields.py
+```
+
+Outputs are written to `data/`:
+
+- `data/field_inventory.csv`: aggregated field coverage and non-null rates
+- `data/field_samples.json`: raw per-ticker samples and source metadata
+- `data/audit_summary.md`: quick reliability summary with Tier 1/2/3 guidance
+
 ## API
 
 - `GET /api/stock/<ticker>`
@@ -44,6 +59,7 @@ curl http://localhost:5001/api/health
 - [styles.css](styles.css): styles
 - [script.js](script.js): frontend logic
 - [requirements.txt](requirements.txt): dependencies
+- [scripts/audit_yfinance_fields.py](scripts/audit_yfinance_fields.py): yfinance field audit tool
 - [logs/.gitkeep](logs/.gitkeep): keeps log folder in git
 
 ## Notes

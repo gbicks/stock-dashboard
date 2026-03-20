@@ -1,0 +1,511 @@
+source_object,field_name,seen_in,ticker_count,seen_rate,non_null_count,non_null_rate,value_types,sample_value
+actions,Capital Gains,1,6,0.17,1,0.17,float,0.0
+actions,Dividends,5,6,0.83,5,0.83,float,0.000536
+actions,Stock Splits,5,6,0.83,5,0.83,float,0.0
+actions,__columns__,6,6,1.00,6,1.00,int,2
+actions,__rows__,6,6,1.00,5,0.83,int,95
+balance_sheet,Accounts Payable,5,6,0.83,4,0.67,float64,69860000000.0
+balance_sheet,Accounts Receivable,4,6,0.67,4,0.67,float64,39777000000.0
+balance_sheet,Accumulated Depreciation,5,6,0.83,5,0.83,float64,-76014000000.0
+balance_sheet,Additional Paid In Capital,3,6,0.50,3,0.50,float64,42770000000.0
+balance_sheet,Allowance For Doubtful Accounts Receivable,2,6,0.33,1,0.17,float64,-944000000.0
+balance_sheet,Available For Sale Securities,3,6,0.50,3,0.50,float64,77723000000.0
+balance_sheet,Buildings And Improvements,2,6,0.33,2,0.33,float64,137921000000.0
+balance_sheet,Capital Lease Obligations,5,6,0.83,4,0.67,float64,17437000000.0
+balance_sheet,Capital Stock,5,6,0.83,5,0.83,float64,93568000000.0
+balance_sheet,Cash And Cash Equivalents,4,6,0.67,4,0.67,float64,35934000000.0
+balance_sheet,Cash Cash Equivalents And Short Term Investments,4,6,0.67,4,0.67,float64,54697000000.0
+balance_sheet,Cash Equivalents,3,6,0.50,3,0.50,float64,7667000000.0
+balance_sheet,Cash Financial,2,6,0.33,2,0.33,float64,28267000000.0
+balance_sheet,Commercial Paper,2,6,0.33,2,0.33,float64,7979000000.0
+balance_sheet,Common Stock,5,6,0.83,5,0.83,float64,93568000000.0
+balance_sheet,Common Stock Equity,5,6,0.83,5,0.83,float64,73733000000.0
+balance_sheet,Construction In Progress,3,6,0.50,3,0.50,float64,8786000000.0
+balance_sheet,Current Accrued Expenses,4,6,0.67,4,0.67,float64,8919000000.0
+balance_sheet,Current Assets,5,6,0.83,5,0.83,float64,147957000000.0
+balance_sheet,Current Capital Lease Obligation,4,6,0.67,3,0.50,float64,1025000000.0
+balance_sheet,Current Debt,4,6,0.67,4,0.67,float64,20329000000.0
+balance_sheet,Current Debt And Capital Lease Obligation,5,6,0.83,5,0.83,float64,20329000000.0
+balance_sheet,Current Deferred Assets,1,6,0.17,1,0.17,float64,5365000000.0
+balance_sheet,Current Deferred Liabilities,5,6,0.83,5,0.83,float64,9055000000.0
+balance_sheet,Current Deferred Revenue,5,6,0.83,5,0.83,float64,9055000000.0
+balance_sheet,Current Liabilities,5,6,0.83,5,0.83,float64,165631000000.0
+balance_sheet,Current Provisions,1,6,0.17,1,0.17,float64,3004000000.0
+balance_sheet,Dueto Related Parties Current,1,6,0.17,1,0.17,float64,8130000000.0
+balance_sheet,Financial Assets,1,6,0.17,1,0.17,float64,272000000.0
+balance_sheet,Finished Goods,2,6,0.33,1,0.17,float64,4849000000.0
+balance_sheet,Foreign Currency Translation Adjustments,1,6,0.17,1,0.17,float64,3286000000.0
+balance_sheet,Gains Losses Not Affecting Retained Earnings,5,6,0.83,5,0.83,float64,-5571000000.0
+balance_sheet,Goodwill,3,6,0.50,3,0.50,float64,119509000000.0
+balance_sheet,Goodwill And Other Intangible Assets,3,6,0.50,3,0.50,float64,142113000000.0
+balance_sheet,Gross Accounts Receivable,2,6,0.33,1,0.17,float64,70849000000.0
+balance_sheet,Gross PPE,5,6,0.83,5,0.83,float64,125848000000.0
+balance_sheet,Hedging Assets Current,1,6,0.17,1,0.17,float64,10000000.0
+balance_sheet,Income Tax Payable,3,6,0.50,3,0.50,float64,13016000000.0
+balance_sheet,Interest Payable,1,6,0.17,0,0.00,float64,nan
+balance_sheet,Inventory,4,6,0.67,4,0.67,float64,5718000000.0
+balance_sheet,Invested Capital,5,6,0.83,5,0.83,float64,172390000000.0
+balance_sheet,Investmentin Financial Assets,3,6,0.50,3,0.50,float64,77723000000.0
+balance_sheet,Investments And Advances,3,6,0.50,3,0.50,float64,77723000000.0
+balance_sheet,Land And Improvements,3,6,0.50,3,0.50,float64,27337000000.0
+balance_sheet,Leases,4,6,0.67,4,0.67,float64,15091000000.0
+balance_sheet,Line Of Credit,1,6,0.17,1,0.17,float64,0.0
+balance_sheet,Long Term Capital Lease Obligation,5,6,0.83,4,0.67,float64,17437000000.0
+balance_sheet,Long Term Debt,4,6,0.67,4,0.67,float64,78328000000.0
+balance_sheet,Long Term Debt And Capital Lease Obligation,5,6,0.83,5,0.83,float64,78328000000.0
+balance_sheet,Long Term Equity Investment,2,6,0.33,2,0.33,float64,12673000000.0
+balance_sheet,Long Term Provisions,1,6,0.17,1,0.17,float64,6132000000.0
+balance_sheet,Machinery Furniture Equipment,5,6,0.83,5,0.83,float64,83420000000.0
+balance_sheet,Minority Interest,3,6,0.50,3,0.50,float64,728000000.0
+balance_sheet,Net Debt,3,6,0.50,3,0.50,float64,62723000000.0
+balance_sheet,Net PPE,5,6,0.83,5,0.83,float64,49834000000.0
+balance_sheet,Net Tangible Assets,5,6,0.83,5,0.83,float64,73733000000.0
+balance_sheet,Non Current Accrued Expenses,1,6,0.17,0,0.00,float64,nan
+balance_sheet,Non Current Deferred Assets,3,6,0.50,3,0.50,float64,20777000000.0
+balance_sheet,Non Current Deferred Liabilities,4,6,0.67,4,0.67,float64,5545000000.0
+balance_sheet,Non Current Deferred Revenue,4,6,0.67,4,0.67,float64,2710000000.0
+balance_sheet,Non Current Deferred Taxes Assets,3,6,0.50,3,0.50,float64,20777000000.0
+balance_sheet,Non Current Deferred Taxes Liabilities,3,6,0.50,2,0.33,float64,2835000000.0
+balance_sheet,Non Current Prepaid Assets,1,6,0.17,0,0.00,float64,nan
+balance_sheet,Ordinary Shares Number,5,6,0.83,5,0.83,float64,14773260000.0
+balance_sheet,Other Current Assets,5,6,0.83,5,0.83,float64,14585000000.0
+balance_sheet,Other Current Borrowings,4,6,0.67,4,0.67,float64,12350000000.0
+balance_sheet,Other Current Liabilities,4,6,0.67,4,0.67,float64,44452000000.0
+balance_sheet,Other Equity Adjustments,5,6,0.83,5,0.83,float64,-5571000000.0
+balance_sheet,Other Equity Interest,1,6,0.17,0,0.00,float64,nan
+balance_sheet,Other Intangible Assets,3,6,0.50,3,0.50,float64,22604000000.0
+balance_sheet,Other Inventories,1,6,0.17,1,0.17,float64,1296000000.0
+balance_sheet,Other Investments,1,6,0.17,0,0.00,float64,nan
+balance_sheet,Other Non Current Assets,5,6,0.83,5,0.83,float64,62950000000.0
+balance_sheet,Other Non Current Liabilities,5,6,0.83,5,0.83,float64,41549000000.0
+balance_sheet,Other Payable,1,6,0.17,1,0.17,float64,190044000000.0
+balance_sheet,Other Properties,5,6,0.83,4,0.67,float64,24823000000.0
+balance_sheet,Other Receivables,2,6,0.33,2,0.33,float64,33180000000.0
+balance_sheet,Other Short Term Investments,4,6,0.67,4,0.67,float64,18763000000.0
+balance_sheet,Payables,5,6,0.83,5,0.83,float64,82876000000.0
+balance_sheet,Payables And Accrued Expenses,5,6,0.83,5,0.83,float64,91795000000.0
+balance_sheet,Pensionand Other Post Retirement Benefit Plans Current,1,6,0.17,1,0.17,float64,13709000000.0
+balance_sheet,Preferred Securities Outside Stock Equity,2,6,0.33,0,0.00,float64,nan
+balance_sheet,Preferred Stock,2,6,0.33,1,0.17,float64,0.0
+balance_sheet,Prepaid Assets,3,6,0.50,1,0.17,float64,20556000000.0
+balance_sheet,Properties,5,6,0.83,5,0.83,float64,0.0
+balance_sheet,Raw Materials,2,6,0.33,1,0.17,float64,4522000000.0
+balance_sheet,Receivables,5,6,0.83,5,0.83,float64,72957000000.0
+balance_sheet,Restricted Cash,2,6,0.33,1,0.17,float64,43781000000.0
+balance_sheet,Retained Earnings,5,6,0.83,5,0.83,float64,-14264000000.0
+balance_sheet,Share Issued,5,6,0.83,5,0.83,float64,14773260000.0
+balance_sheet,Stockholders Equity,5,6,0.83,5,0.83,float64,73733000000.0
+balance_sheet,Tangible Book Value,5,6,0.83,5,0.83,float64,73733000000.0
+balance_sheet,Total Assets,5,6,0.83,5,0.83,float64,359241000000.0
+balance_sheet,Total Capitalization,5,6,0.83,5,0.83,float64,152061000000.0
+balance_sheet,Total Debt,5,6,0.83,5,0.83,float64,98657000000.0
+balance_sheet,Total Equity Gross Minority Interest,5,6,0.83,5,0.83,float64,73733000000.0
+balance_sheet,Total Liabilities Net Minority Interest,5,6,0.83,5,0.83,float64,285508000000.0
+balance_sheet,Total Non Current Assets,5,6,0.83,5,0.83,float64,211284000000.0
+balance_sheet,Total Non Current Liabilities Net Minority Interest,5,6,0.83,5,0.83,float64,119877000000.0
+balance_sheet,Total Tax Payable,5,6,0.83,4,0.67,float64,13016000000.0
+balance_sheet,Tradeand Other Payables Non Current,2,6,0.33,1,0.17,float64,25986000000.0
+balance_sheet,Treasury Shares Number,4,6,0.67,1,0.17,float64,1210400.0
+balance_sheet,Treasury Stock,1,6,0.17,1,0.17,float64,36329000000.0
+balance_sheet,Unrealized Gain Loss,1,6,0.17,1,0.17,float64,107000000.0
+balance_sheet,Work In Process,2,6,0.33,1,0.17,float64,1725000000.0
+balance_sheet,Working Capital,5,6,0.83,5,0.83,float64,-17674000000.0
+balance_sheet,__columns__,6,6,1.00,5,0.83,int,5
+balance_sheet,__rows__,6,6,1.00,5,0.83,int,69
+cashflow,Amortization Cash Flow,1,6,0.17,1,0.17,float64,13199000000.0
+cashflow,Amortization Of Intangibles,1,6,0.17,1,0.17,float64,13199000000.0
+cashflow,Asset Impairment Charge,4,6,0.67,3,0.50,float64,943000000.0
+cashflow,Beginning Cash Position,5,6,0.83,5,0.83,float64,29943000000.0
+cashflow,Capital Expenditure,5,6,0.83,5,0.83,float64,-12715000000.0
+cashflow,Cash Dividends Paid,3,6,0.50,3,0.50,float64,-15421000000.0
+cashflow,Cash Flow From Continuing Financing Activities,5,6,0.83,5,0.83,float64,-120686000000.0
+cashflow,Cash Flow From Continuing Investing Activities,5,6,0.83,5,0.83,float64,15195000000.0
+cashflow,Cash Flow From Continuing Operating Activities,5,6,0.83,5,0.83,float64,111482000000.0
+cashflow,Change In Account Payable,4,6,0.67,4,0.67,float64,902000000.0
+cashflow,Change In Accrued Expense,2,6,0.33,1,0.17,float64,25873000000.0
+cashflow,Change In Income Tax Payable,2,6,0.33,1,0.17,float64,1968000000.0
+cashflow,Change In Inventory,3,6,0.50,3,0.50,float64,1400000000.0
+cashflow,Change In Other Current Assets,4,6,0.67,3,0.50,float64,-9197000000.0
+cashflow,Change In Other Current Liabilities,4,6,0.67,3,0.50,float64,-11076000000.0
+cashflow,Change In Other Working Capital,5,6,0.83,4,0.67,float64,5400000000.0
+cashflow,Change In Payable,5,6,0.83,5,0.83,float64,902000000.0
+cashflow,Change In Payables And Accrued Expense,5,6,0.83,5,0.83,float64,902000000.0
+cashflow,Change In Prepaid Assets,3,6,0.50,3,0.50,float64,-3181000000.0
+cashflow,Change In Receivables,4,6,0.67,4,0.67,float64,-7029000000.0
+cashflow,Change In Tax Payable,2,6,0.33,1,0.17,float64,1968000000.0
+cashflow,Change In Working Capital,5,6,0.83,5,0.83,float64,-25000000000.0
+cashflow,Changes In Account Receivables,4,6,0.67,4,0.67,float64,-6682000000.0
+cashflow,Changes In Cash,5,6,0.83,5,0.83,float64,5991000000.0
+cashflow,Common Stock Dividend Paid,2,6,0.33,2,0.33,float64,-15421000000.0
+cashflow,Common Stock Issuance,5,6,0.83,2,0.33,float64,2056000000.0
+cashflow,Common Stock Payments,4,6,0.67,4,0.67,float64,-90711000000.0
+cashflow,Deferred Income Tax,5,6,0.83,3,0.50,float64,-7056000000.0
+cashflow,Deferred Tax,5,6,0.83,3,0.50,float64,-7056000000.0
+cashflow,Depreciation,3,6,0.50,3,0.50,float64,34153000000.0
+cashflow,Depreciation Amortization Depletion,5,6,0.83,5,0.83,float64,11698000000.0
+cashflow,Depreciation And Amortization,5,6,0.83,5,0.83,float64,11698000000.0
+cashflow,Dividends Received Cfi,1,6,0.17,0,0.00,float64,nan
+cashflow,Earnings Losses From Equity Investments,1,6,0.17,1,0.17,float64,-5966000000.0
+cashflow,Effect Of Exchange Rate Changes,4,6,0.67,4,0.67,float64,63000000.0
+cashflow,End Cash Position,5,6,0.83,5,0.83,float64,35934000000.0
+cashflow,Financing Cash Flow,5,6,0.83,5,0.83,float64,-120686000000.0
+cashflow,Free Cash Flow,5,6,0.83,5,0.83,float64,98767000000.0
+cashflow,Gain Loss On Investment Securities,2,6,0.33,2,0.33,float64,202000000.0
+cashflow,Gain Loss On Sale Of Business,1,6,0.17,1,0.17,float64,21536000000.0
+cashflow,Gain Loss On Sale Of PPE,2,6,0.33,2,0.33,float64,68000000.0
+cashflow,Income Tax Paid Supplemental Data,4,6,0.67,2,0.33,float64,43369000000.0
+cashflow,Interest Paid Supplemental Data,4,6,0.67,2,0.33,float64,292000000.0
+cashflow,Investing Cash Flow,5,6,0.83,5,0.83,float64,15195000000.0
+cashflow,Issuance Of Capital Stock,5,6,0.83,2,0.33,float64,2056000000.0
+cashflow,Issuance Of Debt,5,6,0.83,4,0.67,float64,4481000000.0
+cashflow,Long Term Debt Issuance,5,6,0.83,4,0.67,float64,4481000000.0
+cashflow,Long Term Debt Payments,5,6,0.83,4,0.67,float64,-10932000000.0
+cashflow,Net Business Purchase And Sale,5,6,0.83,3,0.50,float64,-5978000000.0
+cashflow,Net Common Stock Issuance,5,6,0.83,4,0.67,float64,-90711000000.0
+cashflow,Net Foreign Currency Exchange Gain Loss,1,6,0.17,1,0.17,float64,452000000.0
+cashflow,Net Income From Continuing Operations,5,6,0.83,5,0.83,float64,112010000000.0
+cashflow,Net Intangibles Purchase And Sale,2,6,0.33,1,0.17,float64,0.0
+cashflow,Net Investment Purchase And Sale,5,6,0.83,5,0.83,float64,29390000000.0
+cashflow,Net Issuance Payments Of Debt,5,6,0.83,4,0.67,float64,-8483000000.0
+cashflow,Net Long Term Debt Issuance,5,6,0.83,4,0.67,float64,-6451000000.0
+cashflow,Net Other Financing Charges,5,6,0.83,5,0.83,float64,-6071000000.0
+cashflow,Net Other Investing Changes,5,6,0.83,4,0.67,float64,-1480000000.0
+cashflow,Net PPE Purchase And Sale,5,6,0.83,5,0.83,float64,-12715000000.0
+cashflow,Net Preferred Stock Issuance,1,6,0.17,0,0.00,float64,nan
+cashflow,Net Short Term Debt Issuance,2,6,0.33,2,0.33,float64,-2032000000.0
+cashflow,Operating Cash Flow,5,6,0.83,5,0.83,float64,111482000000.0
+cashflow,Operating Gains Losses,3,6,0.50,3,0.50,float64,202000000.0
+cashflow,Other Non Cash Items,4,6,0.67,4,0.67,float64,-89000000.0
+cashflow,Preferred Stock Issuance,1,6,0.17,0,0.00,float64,nan
+cashflow,Preferred Stock Payments,1,6,0.17,0,0.00,float64,nan
+cashflow,Proceeds From Stock Option Exercised,2,6,0.33,2,0.33,float64,1186000000.0
+cashflow,Provisionand Write Offof Assets,1,6,0.17,1,0.17,float64,3016000000.0
+cashflow,Purchase Of Business,5,6,0.83,3,0.50,float64,-5978000000.0
+cashflow,Purchase Of Intangibles,2,6,0.33,1,0.17,float64,0.0
+cashflow,Purchase Of Investment,5,6,0.83,5,0.83,float64,-24407000000.0
+cashflow,Purchase Of PPE,5,6,0.83,5,0.83,float64,-12715000000.0
+cashflow,Repayment Of Debt,5,6,0.83,4,0.67,float64,-10932000000.0
+cashflow,Repurchase Of Capital Stock,4,6,0.67,4,0.67,float64,-90711000000.0
+cashflow,Sale Of Business,3,6,0.50,1,0.17,float64,1873000000.0
+cashflow,Sale Of Intangibles,2,6,0.33,0,0.00,float64,nan
+cashflow,Sale Of Investment,5,6,0.83,5,0.83,float64,53797000000.0
+cashflow,Sale Of PPE,1,6,0.17,1,0.17,float64,2428000000.0
+cashflow,Short Term Debt Issuance,1,6,0.17,0,0.00,float64,nan
+cashflow,Stock Based Compensation,5,6,0.83,5,0.83,float64,12863000000.0
+cashflow,Unrealized Gain Loss On Investment Securities,2,6,0.33,2,0.33,float64,-536000000.0
+cashflow,__columns__,6,6,1.00,5,0.83,int,5
+cashflow,__rows__,6,6,1.00,5,0.83,int,53
+fast_info,currency,6,6,1.00,6,1.00,str,USD
+fast_info,dayHigh,6,6,1.00,6,1.00,float,249.1999053955078
+fast_info,dayLow,6,6,1.00,6,1.00,float,246.61000061035156
+fast_info,exchange,6,6,1.00,6,1.00,str,NMS
+fast_info,fiftyDayAverage,6,6,1.00,6,1.00,float,261.37679901123045
+fast_info,lastPrice,6,6,1.00,6,1.00,float,247.86000061035156
+fast_info,lastVolume,6,6,1.00,6,1.00,int,37486423
+fast_info,marketCap,6,6,1.00,5,0.83,NoneType|float,3643027947330.9023
+fast_info,open,6,6,1.00,6,1.00,float,248.11000061035156
+fast_info,previousClose,6,6,1.00,6,1.00,float,249.84
+fast_info,quoteType,6,6,1.00,6,1.00,str,EQUITY
+fast_info,regularMarketPreviousClose,6,6,1.00,6,1.00,float,248.9600067138672
+fast_info,shares,6,6,1.00,5,0.83,NoneType|int,14697926000
+fast_info,tenDayAverageVolume,6,6,1.00,6,1.00,int,34893000
+fast_info,threeMonthAverageVolume,6,6,1.00,6,1.00,int,45442023
+fast_info,timezone,6,6,1.00,6,1.00,str,America/New_York
+fast_info,twoHundredDayAverage,6,6,1.00,6,1.00,float,246.5994493865967
+fast_info,yearChange,6,6,1.00,6,1.00,float,0.14060568030729817
+fast_info,yearHigh,6,6,1.00,6,1.00,float,288.6199951171875
+fast_info,yearLow,6,6,1.00,6,1.00,float,169.2100067138672
+history:1d,Adj Close,6,6,1.00,6,1.00,float,247.86000061035156
+history:1d,Close,6,6,1.00,6,1.00,float,247.86000061035156
+history:1d,High,6,6,1.00,6,1.00,float,249.1999053955078
+history:1d,Low,6,6,1.00,6,1.00,float,246.61000061035156
+history:1d,Open,6,6,1.00,6,1.00,float,248.11000061035156
+history:1d,Volume,6,6,1.00,6,1.00,int,37486425
+history:1d,__rows__,6,6,1.00,6,1.00,int,1
+history:1mo,Adj Close,6,6,1.00,6,1.00,float,264.5799865722656
+history:1mo,Close,6,6,1.00,6,1.00,float,264.5799865722656
+history:1mo,High,6,6,1.00,6,1.00,float,264.75
+history:1mo,Low,6,6,1.00,6,1.00,float,258.1600036621094
+history:1mo,Open,6,6,1.00,6,1.00,float,258.9700012207031
+history:1mo,Volume,6,6,1.00,6,1.00,int,42070500
+history:1mo,__rows__,6,6,1.00,6,1.00,int,21
+history:1y,Adj Close,6,6,1.00,6,1.00,float,213.17091369628906
+history:1y,Close,6,6,1.00,6,1.00,float,214.10000610351562
+history:1y,High,6,6,1.00,6,1.00,float,217.49000549316406
+history:1y,Low,6,6,1.00,6,1.00,float,212.22000122070312
+history:1y,Open,6,6,1.00,6,1.00,float,213.99000549316406
+history:1y,Volume,6,6,1.00,6,1.00,int,48862900
+history:1y,__rows__,6,6,1.00,6,1.00,int,252
+history:5d,Adj Close,6,6,1.00,6,1.00,float,252.82000732421875
+history:5d,Close,6,6,1.00,6,1.00,float,252.82000732421875
+history:5d,High,6,6,1.00,6,1.00,float,253.88999938964844
+history:5d,Low,6,6,1.00,6,1.00,float,249.8800048828125
+history:5d,Open,6,6,1.00,6,1.00,float,252.11000061035156
+history:5d,Volume,6,6,1.00,6,1.00,int,32074200
+history:5d,__rows__,6,6,1.00,6,1.00,int,5
+income_stmt,Amortization,1,6,0.17,1,0.17,float64,6336000000.0
+income_stmt,Amortization Of Intangibles Income Statement,1,6,0.17,1,0.17,float64,6336000000.0
+income_stmt,Average Dilution Earnings,3,6,0.50,1,0.17,float64,-65000000.0
+income_stmt,Basic Average Shares,5,6,0.83,5,0.83,float64,14948500000.0
+income_stmt,Basic EPS,5,6,0.83,5,0.83,float64,7.49
+income_stmt,Cost Of Revenue,5,6,0.83,5,0.83,float64,220960000000.0
+income_stmt,Depreciation Amortization Depletion Income Statement,1,6,0.17,1,0.17,float64,6336000000.0
+income_stmt,Depreciation And Amortization In Income Statement,1,6,0.17,1,0.17,float64,6336000000.0
+income_stmt,Diluted Average Shares,5,6,0.83,5,0.83,float64,15004697000.0
+income_stmt,Diluted EPS,5,6,0.83,5,0.83,float64,7.46
+income_stmt,Diluted NI Availto Com Stockholders,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,EBIT,5,6,0.83,5,0.83,float64,133050000000.0
+income_stmt,EBITDA,5,6,0.83,5,0.83,float64,144748000000.0
+income_stmt,Earnings From Equity Interest Net Of Tax,1,6,0.17,1,0.17,float64,5966000000.0
+income_stmt,Gain On Sale Of Security,1,6,0.17,1,0.17,float64,505000000.0
+income_stmt,General And Administrative Expense,3,6,0.50,3,0.50,float64,7223000000.0
+income_stmt,Gross Profit,5,6,0.83,5,0.83,float64,195201000000.0
+income_stmt,Impairment Of Capital Assets,1,6,0.17,1,0.17,float64,6171000000.0
+income_stmt,Interest Expense,5,6,0.83,3,0.50,float64,2385000000.0
+income_stmt,Interest Expense Non Operating,5,6,0.83,3,0.50,float64,2385000000.0
+income_stmt,Interest Income,5,6,0.83,4,0.67,float64,2647000000.0
+income_stmt,Interest Income Non Operating,5,6,0.83,4,0.67,float64,2647000000.0
+income_stmt,Minority Interests,3,6,0.50,3,0.50,float64,-61000000.0
+income_stmt,Net Income,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,Net Income Common Stockholders,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,Net Income Continuous Operations,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,Net Income From Continuing And Discontinued Operation,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,Net Income From Continuing Operation Net Minority Interest,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,Net Income Including Noncontrolling Interests,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,Net Interest Income,5,6,0.83,4,0.67,float64,262000000.0
+income_stmt,Net Non Operating Interest Income Expense,5,6,0.83,4,0.67,float64,262000000.0
+income_stmt,Normalized EBITDA,5,6,0.83,5,0.83,float64,144748000000.0
+income_stmt,Normalized Income,5,6,0.83,5,0.83,float64,112010000000.0
+income_stmt,Operating Expense,5,6,0.83,5,0.83,float64,62151000000.0
+income_stmt,Operating Income,5,6,0.83,5,0.83,float64,133050000000.0
+income_stmt,Operating Revenue,5,6,0.83,5,0.83,float64,416161000000.0
+income_stmt,Other Gand A,3,6,0.50,3,0.50,float64,7223000000.0
+income_stmt,Other Income Expense,5,6,0.83,5,0.83,float64,-321000000.0
+income_stmt,Other Non Operating Income Expenses,5,6,0.83,5,0.83,float64,-321000000.0
+income_stmt,Other Operating Expenses,1,6,0.17,1,0.17,float64,-761000000.0
+income_stmt,Otherunder Preferred Stock Dividend,3,6,0.50,1,0.17,float64,639000000.0
+income_stmt,Pretax Income,5,6,0.83,5,0.83,float64,132729000000.0
+income_stmt,Reconciled Cost Of Revenue,5,6,0.83,5,0.83,float64,220960000000.0
+income_stmt,Reconciled Depreciation,5,6,0.83,5,0.83,float64,11698000000.0
+income_stmt,Rent Expense Supplemental,1,6,0.17,0,0.00,float64,nan
+income_stmt,Research And Development,5,6,0.83,5,0.83,float64,34550000000.0
+income_stmt,Restructuring And Mergern Acquisition,1,6,0.17,1,0.17,float64,494000000.0
+income_stmt,Selling And Marketing Expense,3,6,0.50,3,0.50,float64,25654000000.0
+income_stmt,Selling General And Administration,5,6,0.83,5,0.83,float64,27601000000.0
+income_stmt,Special Income Charges,3,6,0.50,3,0.50,float64,-943000000.0
+income_stmt,Tax Effect Of Unusual Items,5,6,0.83,5,0.83,float64,0.0
+income_stmt,Tax Provision,5,6,0.83,5,0.83,float64,20719000000.0
+income_stmt,Tax Rate For Calcs,5,6,0.83,5,0.83,float64,0.156
+income_stmt,Total Expenses,5,6,0.83,5,0.83,float64,283111000000.0
+income_stmt,Total Operating Income As Reported,5,6,0.83,5,0.83,float64,133050000000.0
+income_stmt,Total Revenue,5,6,0.83,5,0.83,float64,416161000000.0
+income_stmt,Total Unusual Items,3,6,0.50,3,0.50,float64,-438000000.0
+income_stmt,Total Unusual Items Excluding Goodwill,3,6,0.50,3,0.50,float64,-438000000.0
+income_stmt,Write Off,1,6,0.17,1,0.17,float64,943000000.0
+income_stmt,__columns__,6,6,1.00,5,0.83,int,5
+income_stmt,__rows__,6,6,1.00,5,0.83,int,39
+info,52WeekChange,5,6,0.83,5,0.83,float,0.14509547
+info,SandP52WeekChange,5,6,0.83,5,0.83,float,0.16888046
+info,address1,5,6,0.83,5,0.83,str,One Apple Park Way
+info,address2,2,6,0.33,2,0.33,str,26/F 1 Matheson Street
+info,allTimeHigh,6,6,1.00,6,1.00,float,288.62
+info,allTimeLow,6,6,1.00,6,1.00,float,0.049107
+info,ask,6,6,1.00,6,1.00,float,248.97
+info,askSize,6,6,1.00,6,1.00,int,3
+info,auditRisk,4,6,0.67,4,0.67,int,2
+info,averageAnalystRating,5,6,0.83,5,0.83,str,1.9 - Buy
+info,averageDailyVolume10Day,6,6,1.00,6,1.00,int,36372450
+info,averageDailyVolume3Month,6,6,1.00,6,1.00,int,45621310
+info,averageVolume,6,6,1.00,6,1.00,int,45621310
+info,averageVolume10days,6,6,1.00,6,1.00,int,36372450
+info,beta,4,6,0.67,4,0.67,float,1.116
+info,beta3Year,1,6,0.17,1,0.17,float,1.0
+info,bid,6,6,1.00,6,1.00,float,247.42
+info,bidSize,6,6,1.00,6,1.00,int,2
+info,boardRisk,4,6,0.67,4,0.67,int,1
+info,bookValue,6,6,1.00,6,1.00,float,5.998
+info,category,1,6,0.17,1,0.17,str,Large Blend
+info,city,5,6,0.83,5,0.83,str,Cupertino
+info,companyOfficers,6,6,1.00,6,1.00,list,list(len=10)
+info,compensationAsOfEpochDate,5,6,0.83,5,0.83,int,1767139200
+info,compensationRisk,4,6,0.67,4,0.67,int,7
+info,corporateActions,6,6,1.00,6,1.00,list,list(len=0)
+info,country,5,6,0.83,5,0.83,str,United States
+info,cryptoTradeable,6,6,1.00,6,1.00,bool,False
+info,currency,6,6,1.00,6,1.00,str,USD
+info,currentPrice,5,6,0.83,5,0.83,float,247.86
+info,currentRatio,5,6,0.83,5,0.83,float,0.974
+info,customPriceAlertConfidence,6,6,1.00,6,1.00,str,HIGH
+info,dateShortInterest,5,6,0.83,5,0.83,int,1772150400
+info,dayHigh,6,6,1.00,6,1.00,float,249.1999
+info,dayLow,6,6,1.00,6,1.00,float,246.61
+info,debtToEquity,5,6,0.83,5,0.83,float,102.63
+info,displayName,5,6,0.83,5,0.83,str,Apple
+info,dividendDate,3,6,0.50,3,0.50,int,1770854400
+info,dividendRate,3,6,0.50,3,0.50,float,1.04
+info,dividendYield,4,6,0.67,4,0.67,float,0.42
+info,earningsCallTimestampEnd,5,6,0.83,5,0.83,int,1769724000
+info,earningsCallTimestampStart,5,6,0.83,5,0.83,int,1769724000
+info,earningsGrowth,5,6,0.83,5,0.83,float,0.183
+info,earningsQuarterlyGrowth,5,6,0.83,5,0.83,float,0.159
+info,earningsTimestamp,5,6,0.83,5,0.83,int,1769720400
+info,earningsTimestampEnd,5,6,0.83,5,0.83,int,1777579200
+info,earningsTimestampStart,5,6,0.83,5,0.83,int,1777579200
+info,ebitda,5,6,0.83,5,0.83,int,152901992448
+info,ebitdaMargins,5,6,0.83,5,0.83,float,0.35099998
+info,enterpriseToEbitda,5,6,0.83,5,0.83,float,24.059
+info,enterpriseToRevenue,5,6,0.83,5,0.83,float,8.445
+info,enterpriseValue,5,6,0.83,5,0.83,int,3678618517504
+info,epsCurrentYear,5,6,0.83,5,0.83,float,8.51182
+info,epsForward,5,6,0.83,5,0.83,float,9.32109
+info,epsTrailingTwelveMonths,6,6,1.00,6,1.00,float,7.89
+info,esgPopulated,6,6,1.00,6,1.00,bool,False
+info,exDividendDate,3,6,0.50,3,0.50,int,1770595200
+info,exchange,6,6,1.00,6,1.00,str,NMS
+info,exchangeDataDelayedBy,6,6,1.00,6,1.00,int,0
+info,exchangeTimezoneName,6,6,1.00,6,1.00,str,America/New_York
+info,exchangeTimezoneShortName,6,6,1.00,6,1.00,str,EDT
+info,executiveTeam,6,6,1.00,6,1.00,list,list(len=0)
+info,fax,1,6,0.17,1,0.17,str,852 2215 5200
+info,fiftyDayAverage,6,6,1.00,6,1.00,float,261.6448
+info,fiftyDayAverageChange,6,6,1.00,6,1.00,float,-13.784805
+info,fiftyDayAverageChangePercent,6,6,1.00,6,1.00,float,-0.052685186
+info,fiftyTwoWeekChangePercent,6,6,1.00,6,1.00,float,14.509546
+info,fiftyTwoWeekHigh,6,6,1.00,6,1.00,float,288.62
+info,fiftyTwoWeekHighChange,6,6,1.00,6,1.00,float,-40.759995
+info,fiftyTwoWeekHighChangePercent,6,6,1.00,6,1.00,float,-0.14122374
+info,fiftyTwoWeekLow,6,6,1.00,6,1.00,float,169.21
+info,fiftyTwoWeekLowChange,6,6,1.00,6,1.00,float,78.649994
+info,fiftyTwoWeekLowChangePercent,6,6,1.00,6,1.00,float,0.464807
+info,fiftyTwoWeekRange,6,6,1.00,6,1.00,str,169.21 - 288.62
+info,financialCurrency,6,6,1.00,6,1.00,str,USD
+info,firstTradeDateMilliseconds,6,6,1.00,6,1.00,int,345479400000
+info,fiveYearAverageReturn,1,6,0.17,1,0.17,float,0.1259025
+info,fiveYearAvgDividendYield,2,6,0.33,2,0.33,float,0.52
+info,floatShares,5,6,0.83,5,0.83,int,14656182062
+info,forwardEps,5,6,0.83,5,0.83,float,9.32109
+info,forwardPE,5,6,0.83,5,0.83,float,26.591312
+info,freeCashflow,5,6,0.83,5,0.83,int,106312753152
+info,fullExchangeName,6,6,1.00,6,1.00,str,NasdaqGS
+info,fullTimeEmployees,5,6,0.83,5,0.83,int,150000
+info,fundFamily,1,6,0.17,1,0.17,str,State Street Investment Management
+info,fundInceptionDate,1,6,0.17,1,0.17,int,727660800
+info,gmtOffSetMilliseconds,6,6,1.00,6,1.00,int,-14400000
+info,governanceEpochDate,4,6,0.67,4,0.67,int,1772323200
+info,grossMargins,5,6,0.83,5,0.83,float,0.47325
+info,grossProfits,5,6,0.83,5,0.83,int,206157004800
+info,hasPrePostMarketData,6,6,1.00,6,1.00,bool,True
+info,heldPercentInsiders,5,6,0.83,5,0.83,float,0.01638
+info,heldPercentInstitutions,5,6,0.83,5,0.83,float,0.65265
+info,impliedSharesOutstanding,5,6,0.83,5,0.83,int,14697926000
+info,industry,5,6,0.83,5,0.83,str,Consumer Electronics
+info,industryDisp,5,6,0.83,5,0.83,str,Consumer Electronics
+info,industryKey,5,6,0.83,5,0.83,str,consumer-electronics
+info,ipoExpectedDate,1,6,0.17,1,0.17,str,2020-09-29
+info,irWebsite,2,6,0.33,2,0.33,str,http://investor.apple.com/
+info,isEarningsDateEstimate,5,6,0.83,5,0.83,bool,True
+info,language,6,6,1.00,6,1.00,str,en-US
+info,lastDividendDate,3,6,0.50,3,0.50,int,1770595200
+info,lastDividendValue,3,6,0.50,3,0.50,float,0.26
+info,lastFiscalYearEnd,5,6,0.83,5,0.83,int,1758931200
+info,lastSplitDate,3,6,0.50,3,0.50,int,1598832000
+info,lastSplitFactor,3,6,0.50,3,0.50,str,4:1
+info,legalType,1,6,0.17,1,0.17,str,Exchange Traded Fund
+info,longBusinessSummary,6,6,1.00,6,1.00,str,"Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories wo..."
+info,longName,6,6,1.00,6,1.00,str,Apple Inc.
+info,market,6,6,1.00,6,1.00,str,us_market
+info,marketCap,6,6,1.00,6,1.00,int,3643027750912
+info,marketState,6,6,1.00,6,1.00,str,REGULAR
+info,maxAge,6,6,1.00,6,1.00,int,86400
+info,messageBoardId,6,6,1.00,6,1.00,str,finmb_24937
+info,mostRecentQuarter,5,6,0.83,5,0.83,int,1766793600
+info,navPrice,1,6,0.17,1,0.17,float,659.8058
+info,netAssets,1,6,0.17,1,0.17,float,698270220000.0
+info,netExpenseRatio,1,6,0.17,1,0.17,float,0.0945
+info,netIncomeToCommon,5,6,0.83,5,0.83,int,117776998400
+info,nextFiscalYearEnd,5,6,0.83,5,0.83,int,1790467200
+info,nonDilutedMarketCap,5,6,0.83,5,0.83,int,3655016614400
+info,numberOfAnalystOpinions,5,6,0.83,5,0.83,int,41
+info,open,6,6,1.00,6,1.00,float,248.11
+info,operatingCashflow,5,6,0.83,5,0.83,int,135471996928
+info,operatingMargins,5,6,0.83,5,0.83,float,0.35374
+info,overallRisk,4,6,0.67,4,0.67,int,1
+info,payoutRatio,5,6,0.83,5,0.83,float,0.1304
+info,phone,5,6,0.83,5,0.83,str,(408) 996-1010
+info,previousClose,6,6,1.00,6,1.00,float,248.96
+info,priceEpsCurrentYear,5,6,0.83,5,0.83,float,29.119507
+info,priceHint,6,6,1.00,6,1.00,int,2
+info,priceToBook,6,6,1.00,6,1.00,float,41.323772
+info,priceToSalesTrailing12Months,5,6,0.83,5,0.83,float,8.362914
+info,profitMargins,5,6,0.83,5,0.83,float,0.27037
+info,quickRatio,5,6,0.83,5,0.83,float,0.845
+info,quoteSourceName,6,6,1.00,6,1.00,str,Nasdaq Real Time Price
+info,quoteType,6,6,1.00,6,1.00,str,EQUITY
+info,recommendationKey,5,6,0.83,5,0.83,str,buy
+info,recommendationMean,5,6,0.83,5,0.83,float,1.89583
+info,region,6,6,1.00,6,1.00,str,US
+info,regularMarketChange,6,6,1.00,6,1.00,float,-1.1000061
+info,regularMarketChangePercent,6,6,1.00,6,1.00,float,-0.4418405
+info,regularMarketDayHigh,6,6,1.00,6,1.00,float,249.1999
+info,regularMarketDayLow,6,6,1.00,6,1.00,float,246.61
+info,regularMarketDayRange,6,6,1.00,6,1.00,str,246.61 - 249.1999
+info,regularMarketOpen,6,6,1.00,6,1.00,float,248.11
+info,regularMarketPreviousClose,6,6,1.00,6,1.00,float,248.96
+info,regularMarketPrice,6,6,1.00,6,1.00,float,247.86
+info,regularMarketTime,6,6,1.00,6,1.00,int,1774036153
+info,regularMarketVolume,6,6,1.00,6,1.00,int,37486446
+info,returnOnAssets,5,6,0.83,5,0.83,float,0.24377
+info,returnOnEquity,5,6,0.83,5,0.83,float,1.5202099
+info,revenueGrowth,5,6,0.83,5,0.83,float,0.157
+info,revenuePerShare,5,6,0.83,5,0.83,float,29.305
+info,sector,5,6,0.83,5,0.83,str,Technology
+info,sectorDisp,5,6,0.83,5,0.83,str,Technology
+info,sectorKey,5,6,0.83,5,0.83,str,technology
+info,shareHolderRightsRisk,4,6,0.67,4,0.67,int,1
+info,sharesOutstanding,6,6,1.00,6,1.00,int,14681140000
+info,sharesPercentSharesOut,5,6,0.83,5,0.83,float,0.0088
+info,sharesShort,5,6,0.83,5,0.83,int,129553812
+info,sharesShortPreviousMonthDate,5,6,0.83,5,0.83,int,1769731200
+info,sharesShortPriorMonth,5,6,0.83,5,0.83,int,116854414
+info,shortName,6,6,1.00,6,1.00,str,Apple Inc.
+info,shortPercentOfFloat,5,6,0.83,5,0.83,float,0.0088
+info,shortRatio,5,6,0.83,5,0.83,float,2.41
+info,sourceInterval,6,6,1.00,6,1.00,int,15
+info,state,4,6,0.67,4,0.67,str,CA
+info,symbol,6,6,1.00,6,1.00,str,AAPL
+info,targetHighPrice,5,6,0.83,5,0.83,float,350.0
+info,targetLowPrice,5,6,0.83,5,0.83,float,205.0
+info,targetMeanPrice,5,6,0.83,5,0.83,float,295.43536
+info,targetMedianPrice,5,6,0.83,5,0.83,float,300.0
+info,threeYearAverageReturn,1,6,0.17,1,0.17,float,0.2058404
+info,totalAssets,1,6,0.17,1,0.17,int,698270220288
+info,totalCash,5,6,0.83,5,0.83,int,66907000832
+info,totalCashPerShare,5,6,0.83,5,0.83,float,4.557
+info,totalDebt,5,6,0.83,5,0.83,int,90509000704
+info,totalRevenue,5,6,0.83,5,0.83,int,435617005568
+info,tradeable,6,6,1.00,6,1.00,bool,False
+info,trailingAnnualDividendRate,6,6,1.00,6,1.00,float,1.03
+info,trailingAnnualDividendYield,6,6,1.00,6,1.00,float,0.0041372105
+info,trailingEps,5,6,0.83,5,0.83,float,7.89
+info,trailingPE,6,6,1.00,6,1.00,float,31.41445
+info,trailingPegRatio,6,6,1.00,5,0.83,NoneType|float,2.2115
+info,trailingThreeMonthNavReturns,1,6,0.17,1,0.17,float,0.71775
+info,trailingThreeMonthReturns,1,6,0.17,1,0.17,float,0.71775
+info,triggerable,6,6,1.00,6,1.00,bool,True
+info,twoHundredDayAverage,6,6,1.00,6,1.00,float,246.36314
+info,twoHundredDayAverageChange,6,6,1.00,6,1.00,float,1.4968567
+info,twoHundredDayAverageChangePercent,6,6,1.00,6,1.00,float,0.0060758144
+info,typeDisp,6,6,1.00,6,1.00,str,Equity
+info,volume,6,6,1.00,6,1.00,int,37486446
+info,website,5,6,0.83,5,0.83,str,https://www.apple.com
+info,yield,1,6,0.17,1,0.17,float,0.0106
+info,ytdReturn,1,6,0.17,1,0.17,float,0.6641
+info,zip,4,6,0.67,4,0.67,str,95014
+recommendations,__columns__,6,6,1.00,5,0.83,int,6
+recommendations,__rows__,6,6,1.00,5,0.83,int,4
+recommendations,buy,5,6,0.83,5,0.83,int,25
+recommendations,hold,5,6,0.83,5,0.83,int,15
+recommendations,period,5,6,0.83,5,0.83,str,0m
+recommendations,sell,5,6,0.83,5,0.83,int,1
+recommendations,strongBuy,5,6,0.83,5,0.83,int,6
+recommendations,strongSell,5,6,0.83,5,0.83,int,1
