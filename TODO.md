@@ -3,13 +3,13 @@
 Updated: 2026-03-20
 
 ## Up next
-- [ ] Build watchlist first (top priority): mock up a 5-stock table with displayName, lastPrice, previousClose for AAPL, MSFT, NVDA, AMZN, TSLA.
+- [x] Build watchlist first (top priority): live 5-stock table with displayName, lastPrice, previousClose, and dailyChange for AAPL, MSFT, NVDA, AMZN, TSLA.
 - [ ] Build two-section layout: (1) single-stock quote with extra detail, (2) live watchlist section.
 - [x] Get live data active (Yahoo Finance requests succeeding reliably).
 - [ ] what other data can i get from yfinance
 - [ ] Explore backend data: audit API responses and surface any useful unused fields.
     - [ ] create a database file in git that i can reference?
-- [ ] Future expansion: grow the watchlist from 1 to 2 symbols up to 5 to 10 symbols with price, previous close, and daily percent change on page load.
+- [ ] Future expansion: grow the watchlist from 5 symbols up to 10 symbols with price, previous close, and daily percent change on page load.
 - [x] Organize asset files: review project structure and move files into logical folders (for example static and src).
 
 ## Design
@@ -19,6 +19,7 @@ Updated: 2026-03-20
 
 ## Decisions
 
+- 2026-03-20: Watchlist shipped live with 5 default symbols and calculated daily percent change on page load.
 - 2026-03-20: Watchlist contract fields selected: displayName, lastPrice, previousClose (see data/selected_fields.json).
 - 2026-03-20: Data provenance v1 shipped: live-only by default, explicit 503 on failure, ENABLE_MOCK_DATA dev flag, provenance fields on all responses.
 - 2026-03-20: Removed title/subtitle, switched to white background, set primary accent to #325893.

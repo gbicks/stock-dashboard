@@ -270,8 +270,17 @@ body {
 }
 
 .watchlist-table td:nth-child(2),
-.watchlist-table td:nth-child(3) {
+.watchlist-table td:nth-child(3),
+.watchlist-table td:nth-child(4) {
     text-align: right;
+}
+
+.change-positive {
+    color: #3a9f6b;
+}
+
+.change-negative {
+    color: #d95f5f;
 }
 
 #priceChart {

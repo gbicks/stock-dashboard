@@ -222,17 +222,43 @@ function setDataSourceStatus(data) {
     dataSource.className = 'data-source unavailable';
 }
 
+// Format a number to 2 significant figures, never truncating the integer part.
+// e.g. 284.56 → "285", 28.45 → "28", 2.84 → "2.8", 0.28 → "0.28"
+function sig2(value) {
+    if (value === 0) return '0';
+    const abs = Math.abs(value);
+    const intDigits = Math.floor(Math.log10(abs)) + 1; // negative for values < 1
+    const decimals = Math.max(0, 2 - intDigits);
+    return value.toFixed(decimals);
+}
+
 function formatNumber(num) {
     if (typeof num !== 'number') return num;
-    if (num >= 1e12) return (num / 1e12).toFixed(2) + 'T';
-    if (num >= 1e9) return (num / 1e9).toFixed(2) + 'B';
-    if (num >= 1e6) return (num / 1e6).toFixed(2) + 'M';
-    return num.toFixed(2);
+    if (num >= 1e12) return sig2(num / 1e12) + 'T';
+    if (num >= 1e9) return sig2(num / 1e9) + 'B';
+    if (num >= 1e6) return sig2(num / 1e6) + 'M';
+    return sig2(num);
 }
 
 function formatPrice(value) {
     if (typeof value !== 'number') return '-';
-    return `$${value.toFixed(2)}`;
+    return `$${sig2(value)}`;
+}
+
+// Percent changes use a simpler display rule than prices:
+// show 1 decimal below 10%, otherwise round to a whole percent.
+function formatDailyChange(lastPrice, previousClose) {
+    if (typeof lastPrice !== 'number' || typeof previousClose !== 'number' || previousClose === 0) return '-';
+    const pct = ((lastPrice - previousClose) / previousClose) * 100;
+    const sign = pct >= 0 ? '+' : '';
+    // Examples: 1.2%, 9.9%, 12%, 105%
+    const decimals = Math.abs(pct) >= 10 ? 0 : 1;
+    return `${sign}${pct.toFixed(decimals)}%`;
+}
+
+function dailyChangeClass(lastPrice, previousClose) {
+    if (typeof lastPrice !== 'number' || typeof previousClose !== 'number') return '';
+    return lastPrice >= previousClose ? 'change-positive' : 'change-negative';
 }
 
 function renderWatchlistRows(rows) {
@@ -243,6 +269,7 @@ function renderWatchlistRows(rows) {
             <td>${row.displayName}</td>
             <td>${formatPrice(row.lastPrice)}</td>
             <td>${formatPrice(row.previousClose)}</td>
+            <td class="${dailyChangeClass(row.lastPrice, row.previousClose)}">${formatDailyChange(row.lastPrice, row.previousClose)}</td>
         </tr>
     `).join('');
 }
