@@ -32,6 +32,37 @@ body {
     margin: 0 auto;
 }
 
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 28px;
+    align-items: start;
+}
+
+.panel {
+    min-width: 0;
+}
+
+.section-header {
+    margin-bottom: 14px;
+}
+
+.section-kicker {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.section-header h1,
+.section-header h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 .search-section {
     display: flex;
     gap: 0;
@@ -217,30 +248,17 @@ body {
     display: none;
 }
 
-.watchlist-card {
+.watchlist-panel {
     border-top: 1px solid var(--line);
-    padding: 12px 0 10px;
-    margin-bottom: 14px;
+    padding-top: 12px;
 }
 
-.watchlist-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 10px;
-    margin-bottom: 8px;
-}
-
-.watchlist-header h3 {
-    font-size: 1rem;
-    font-weight: 600;
+.watchlist-header-block {
+    display: block;
 }
 
 .watchlist-note {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--text);
-    opacity: 0.72;
+    margin-top: 4px;
 }
 
 .watchlist-table-wrap {
@@ -325,6 +343,11 @@ body {
         padding: 12px;
     }
 
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
     .stock-header {
         flex-direction: column;
         gap: 15px;
@@ -336,11 +359,6 @@ body {
 
     .stock-details {
         grid-template-columns: 1fr;
-    }
-
-    .watchlist-header {
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .quick-btn {

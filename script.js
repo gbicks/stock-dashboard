@@ -64,13 +64,13 @@ async function fetchStockData(ticker) {
 function displayStockData(data) {
     document.getElementById('companyName').textContent = data.company_name;
     document.getElementById('ticker').textContent = data.ticker;
-    document.getElementById('currentPrice').textContent = `$${data.current_price}`;
+    document.getElementById('currentPrice').textContent = formatPrice(data.current_price);
     setDataSourceStatus(data);
     
     document.getElementById('marketCap').textContent = 
         data.market_cap !== 'N/A' ? formatNumber(data.market_cap) : 'N/A';
     document.getElementById('peRatio').textContent = 
-        data.pe_ratio !== 'N/A' ? data.pe_ratio.toFixed(2) : 'N/A';
+        data.pe_ratio !== 'N/A' ? sig2(data.pe_ratio) : 'N/A';
     document.getElementById('currency').textContent = data.currency;
     
     const timestamp = new Date(data.timestamp).toLocaleTimeString();

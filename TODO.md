@@ -4,7 +4,7 @@ Updated: 2026-03-20
 
 ## Up next
 - [x] Build watchlist first (top priority): live 5-stock table with displayName, lastPrice, previousClose, and dailyChange for AAPL, MSFT, NVDA, AMZN, TSLA.
-- [ ] Build two-section layout: (1) single-stock quote with extra detail, (2) live watchlist section.
+- [x] Build two-section layout: (1) single-stock quote with extra detail, (2) live watchlist section.
 - [x] Get live data active (Yahoo Finance requests succeeding reliably).
 - [ ] what other data can i get from yfinance
 - [ ] Explore backend data: audit API responses and surface any useful unused fields.
@@ -19,6 +19,7 @@ Updated: 2026-03-20
 
 ## Decisions
 
+- 2026-03-20: Page now uses a two-panel layout: single-stock quote on the left, live watchlist on the right on desktop, stacked on mobile.
 - 2026-03-20: Watchlist shipped live with 5 default symbols and calculated daily percent change on page load.
 - 2026-03-20: Watchlist contract fields selected: displayName, lastPrice, previousClose (see data/selected_fields.json).
 - 2026-03-20: Data provenance v1 shipped: live-only by default, explicit 503 on failure, ENABLE_MOCK_DATA dev flag, provenance fields on all responses.

@@ -11,78 +11,87 @@
 </head>
 <body>
     <div class="container">
-        <div class="search-section">
-            <input 
-                type="text" 
-                id="tickerInput" 
-                placeholder="Enter stock ticker (e.g., AAPL, GOOGL, MSFT)"
-                autocomplete="off"
-            >
-            <button id="searchBtn" aria-label="Search"></button>
-        </div>
-
-        <div id="error" class="error hidden"></div>
-
-        <div id="stockCard" class="stock-card hidden">
-            <div class="stock-header">
-                <div>
-                    <h2 id="companyName"></h2>
-                    <p id="ticker" class="ticker-label"></p>
+        <main class="dashboard-grid">
+            <section class="panel quote-panel" aria-labelledby="quoteTitle">
+                <div class="section-header">
+                    <p class="section-kicker">Section 1</p>
+                    <h1 id="quoteTitle">Single-stock quote</h1>
                 </div>
-                <div class="price-section">
-                    <div id="currentPrice" class="price">-</div>
-                    <p id="dataSource" class="data-source"></p>
-                    <p id="lastUpdated" class="timestamp"></p>
-                </div>
-            </div>
 
-            <div class="stock-details">
-                <div class="detail-row">
-                    <span class="label">Market Cap:</span>
-                    <span id="marketCap" class="value">-</span>
+                <div class="search-section">
+                    <input 
+                        type="text" 
+                        id="tickerInput" 
+                        placeholder="Enter stock ticker (e.g., AAPL, GOOGL, MSFT)"
+                        autocomplete="off"
+                    >
+                    <button id="searchBtn" aria-label="Search"></button>
                 </div>
-                <div class="detail-row">
-                    <span class="label">P/E Ratio:</span>
-                    <span id="peRatio" class="value">-</span>
+
+                <div id="error" class="error hidden"></div>
+
+                <div id="stockCard" class="stock-card hidden">
+                    <div class="stock-header">
+                        <div>
+                            <h2 id="companyName"></h2>
+                            <p id="ticker" class="ticker-label"></p>
+                        </div>
+                        <div class="price-section">
+                            <div id="currentPrice" class="price">-</div>
+                            <p id="dataSource" class="data-source"></p>
+                            <p id="lastUpdated" class="timestamp"></p>
+                        </div>
+                    </div>
+
+                    <div class="stock-details">
+                        <div class="detail-row">
+                            <span class="label">Market Cap:</span>
+                            <span id="marketCap" class="value">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">P/E Ratio:</span>
+                            <span id="peRatio" class="value">-</span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="label">Currency:</span>
+                            <span id="currency" class="value">-</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="detail-row">
-                    <span class="label">Currency:</span>
-                    <span id="currency" class="value">-</span>
+
+                <div id="chartContainer" class="chart-container hidden">
+                    <canvas id="priceChart"></canvas>
                 </div>
-            </div>
-        </div>
 
-        <div id="chartContainer" class="chart-container hidden">
-            <canvas id="priceChart"></canvas>
-        </div>
+                <div class="quick-links">
+                    <p>Quick search:</p>
+                    <button class="quick-btn" data-ticker="AAPL">Apple (AAPL)</button>
+                    <button class="quick-btn" data-ticker="GOOGL">Google (GOOGL)</button>
+                    <button class="quick-btn" data-ticker="MSFT">Microsoft (MSFT)</button>
+                    <button class="quick-btn" data-ticker="TSLA">Tesla (TSLA)</button>
+                </div>
 
-        <section class="watchlist-card" aria-labelledby="watchlistTitle">
-            <div class="watchlist-header">
-                <h3 id="watchlistTitle">Watchlist</h3>
-                <p class="watchlist-note">Columns: displayName, lastPrice, previousClose, dailyChange</p>
-            </div>
-            <div class="watchlist-table-wrap">
-                <table class="watchlist-table">
-                    <thead>
-                        <tr>
-                            <th>displayName</th>
-                            <th>lastPrice</th>
-                            <th>previousClose</th>
-                            <th>dailyChange</th>
-                        </tr>
-                    </thead>
-                    <tbody id="watchlistBody"></tbody>
-                </table>
-            </div>
-        </section>
-
-        <div class="quick-links">
-            <p>Quick search:</p>
-            <button class="quick-btn" data-ticker="AAPL">Apple (AAPL)</button>
-            <button class="quick-btn" data-ticker="GOOGL">Google (GOOGL)</button>
-            <button class="quick-btn" data-ticker="MSFT">Microsoft (MSFT)</button>
-            <button class="quick-btn" data-ticker="TSLA">Tesla (TSLA)</button>
-        </div>
+            <section class="panel watchlist-panel" aria-labelledby="watchlistTitle">
+                <div class="section-header watchlist-header-block">
+                    <p class="section-kicker">Section 2</p>
+                    <h2 id="watchlistTitle">Live watchlist</h2>
+                    <p class="watchlist-note">Columns: displayName, lastPrice, previousClose, dailyChange</p>
+                </div>
+                <div class="watchlist-table-wrap">
+                    <table class="watchlist-table">
+                        <thead>
+                            <tr>
+                                <th>displayName</th>
+                                <th>lastPrice</th>
+                                <th>previousClose</th>
+                                <th>dailyChange</th>
+                            </tr>
+                        </thead>
+                        <tbody id="watchlistBody"></tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
