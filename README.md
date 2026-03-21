@@ -49,16 +49,18 @@ Outputs are written to `data/`:
 
 ## API
 
-- `GET /api/stock/<ticker>`
-- `GET /api/stock/<ticker>/history`
-- `GET /api/health`
+- `GET /stocks/api/stock/<ticker>`
+- `GET /stocks/api/stock/<ticker>/history`
+- `GET /stocks/api/health`
 
 Example:
 
 ```bash
-curl http://localhost:5001/api/stock/AAPL
-curl http://localhost:5001/api/stock/AAPL/history
-curl http://localhost:5001/api/health
+curl http://localhost:5001/stocks/api/stock/AAPL
+curl http://localhost:5001/stocks/api/stock/AAPL/history
+curl http://localhost:5001/stocks/api/health
+
+Legacy `/api/*` URLs are redirected to `/stocks/api/*`.
 ```
 
 ## Files
