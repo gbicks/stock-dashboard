@@ -5,7 +5,6 @@ from datetime import datetime, timedelta
 from dotenv import load_dotenv
 from flask import Flask, jsonify, redirect, request, send_from_directory
 from flask_cors import CORS
-import yfinance as yf
 
 load_dotenv()
 
@@ -24,14 +23,41 @@ MOCK_STOCKS = {
     'TSLA': {'name': 'Tesla Inc.', 'price': 187.40, 'basePrice': 175},
 }
 
+YF_MODULE = None
+YF_IMPORT_ERROR = None
+
+
+def get_yfinance_module():
+    """Import yfinance lazily so API health remains available if provider deps fail."""
+    global YF_MODULE, YF_IMPORT_ERROR
+
+    if YF_MODULE is not None:
+        return YF_MODULE, None
+
+    if YF_IMPORT_ERROR is not None:
+        return None, YF_IMPORT_ERROR
+
+    try:
+        import yfinance as yf_module
+    except Exception as exc:
+        YF_IMPORT_ERROR = f'{type(exc).__name__}: {exc}'
+        return None, YF_IMPORT_ERROR
+
+    YF_MODULE = yf_module
+    return YF_MODULE, None
+
 
 def fetch_live_history(ticker, days):
     """Fetch daily OHLC history from Yahoo Finance with fallback query paths."""
+    yf_module, import_error = get_yfinance_module()
+    if import_error:
+        return None, None, f'yfinance unavailable: {import_error}'
+
     max_days = max(days, 5)
     periods = [f'{max_days}d', '1mo', '3mo', '1y']
     errors = []
 
-    stock = yf.Ticker(ticker)
+    stock = yf_module.Ticker(ticker)
 
     for period in periods:
         try:
@@ -49,7 +75,7 @@ def fetch_live_history(ticker, days):
 
     for period in periods:
         try:
-            hist = yf.download(
+            hist = yf_module.download(
                 tickers=ticker,
                 period=period,
                 interval='1d',
