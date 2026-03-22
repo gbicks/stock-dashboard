@@ -1,4 +1,4 @@
-const API_BASE_URL = '/stocks/api';
+const API_BASE_URL = '/api';
 const FONT_MONO = getComputedStyle(document.documentElement).getPropertyValue('--font-mono').trim();
 
 let chart = null;

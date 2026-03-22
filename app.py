@@ -158,8 +158,9 @@ def mock_history_response(ticker, days, provider_error):
 
 
 @app.route('/')
-def serve_root():
-    return redirect('/stocks/', code=308)
+@app.route('/stocks/')
+def serve_index():
+    return send_from_directory(BASE_DIR, 'index.html')
 
 
 @app.route('/stocks')
@@ -167,29 +168,19 @@ def redirect_stocks_no_slash():
     return redirect('/stocks/', code=308)
 
 
-@app.route('/stocks/')
-def serve_index():
-    return send_from_directory(BASE_DIR, 'index.html')
-
-
+@app.route('/styles.css')
 @app.route('/stocks/styles.css')
 def serve_stylesheet():
     return send_from_directory(BASE_DIR, 'styles.css')
 
 
+@app.route('/script.js')
 @app.route('/stocks/script.js')
 def serve_script():
     return send_from_directory(BASE_DIR, 'script.js')
 
-@app.route('/api/<path:subpath>', methods=['GET'])
-def redirect_api_to_stocks(subpath):
-    query = request.query_string.decode('utf-8')
-    target = f'/stocks/api/{subpath}'
-    if query:
-        target = f'{target}?{query}'
-    return redirect(target, code=308)
 
-
+@app.route('/api/stock/<ticker>', methods=['GET'])
 @app.route('/stocks/api/stock/<ticker>', methods=['GET'])
 def get_stock(ticker):
     """Fetch stock data for a given ticker"""
@@ -211,6 +202,7 @@ def get_stock(ticker):
 
     return provider_failure_response(ticker, provider_error)
 
+@app.route('/api/stock/<ticker>/history', methods=['GET'])
 @app.route('/stocks/api/stock/<ticker>/history', methods=['GET'])
 def get_stock_history(ticker):
     """Fetch historical price data (default: last 30 days)"""
@@ -247,6 +239,7 @@ def get_stock_history(ticker):
     return provider_failure_response(ticker, provider_error)
 
 
+@app.route('/api/watchlist', methods=['GET'])
 @app.route('/stocks/api/watchlist', methods=['GET'])
 def get_watchlist():
     """Fetch compact watchlist rows for a list of tickers."""
@@ -297,6 +290,7 @@ def get_watchlist():
         'timestamp': datetime.now().isoformat(),
     })
 
+@app.route('/api/health', methods=['GET'])
 @app.route('/stocks/api/health', methods=['GET'])
 def health():
     """Health check endpoint"""

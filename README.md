@@ -13,7 +13,7 @@ pip install -r requirements.txt
 python app.py
 ```
 
-Open http://localhost:5001/stocks/ in a browser.
+Open http://localhost:5001/ in a browser.
 
 Optional: write server output to `logs/flask.log`:
 
@@ -29,27 +29,27 @@ This project is set up to deploy as a single Render web service.
 1. Push the repo to GitHub.
 2. In Render, create a new Web Service from the repo.
 3. Render will detect [render.yaml](render.yaml).
-4. The app redirects to the dashboard at `/stocks/`.
-5. Canonical API routes are under `/stocks/api/*`.
+4. The dashboard is served at `/`.
+5. Preferred API routes are under `/api/*`.
 
 Legacy compatibility:
-- `/stocks` redirects to `/stocks/`
-- `/api/*` redirects to `/stocks/api/*`
+- `/stocks/` remains available to avoid redirect loops from previously cached `308` responses
+- `/stocks/api/*` remains available alongside `/api/*` for the same reason
 
 ## API
 
-- `GET /stocks/api/stock/<ticker>`
-- `GET /stocks/api/stock/<ticker>/history?days=30`
-- `GET /stocks/api/watchlist?tickers=AAPL,MSFT,NVDA,AMZN,TSLA`
-- `GET /stocks/api/health`
+- `GET /api/stock/<ticker>`
+- `GET /api/stock/<ticker>/history?days=30`
+- `GET /api/watchlist?tickers=AAPL,MSFT,NVDA,AMZN,TSLA`
+- `GET /api/health`
 
 Examples:
 
 ```bash
-curl http://localhost:5001/stocks/api/stock/AAPL
-curl "http://localhost:5001/stocks/api/stock/AAPL/history?days=30"
-curl "http://localhost:5001/stocks/api/watchlist?tickers=AAPL,MSFT"
-curl http://localhost:5001/stocks/api/health
+curl http://localhost:5001/api/stock/AAPL
+curl "http://localhost:5001/api/stock/AAPL/history?days=30"
+curl "http://localhost:5001/api/watchlist?tickers=AAPL,MSFT"
+curl http://localhost:5001/api/health
 ```
 
 ## Explore Available Data
@@ -79,4 +79,4 @@ Outputs are written to `data/`:
 
 ## Notes
 
-Backend runs on port `5001`; mock/demo data is development-only (`ENABLE_MOCK_DATA=true python app.py`); and if `yfinance` fails with mock mode off, the app returns an explicit provider failure instead of fallback data.
+Backend runs on port `5001`; mock/demo data is development-only (`ENABLE_MOCK_DATA=true python app.py`); and if `yfinance` fails with mock mode off, the app returns an explicit provider failure instead of fallback data. Because browsers can cache `308 Permanent Redirect` aggressively, the app serves both the old `/stocks*` paths and the newer root `/api/*` paths directly instead of redirecting between them.
