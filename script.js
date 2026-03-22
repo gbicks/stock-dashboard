@@ -1,4 +1,4 @@
-const API_BASE_URL = '/api';
+const API_BASE_URL = window.location.pathname.startsWith('/stocks') ? '/stocks/api' : '/api';
 const FONT_MONO = getComputedStyle(document.documentElement).getPropertyValue('--font-mono').trim();
 
 let chart = null;
@@ -315,9 +315,9 @@ window.addEventListener('load', async () => {
     try {
         const response = await fetch(`${API_BASE_URL}/health`);
         if (!response.ok) {
-            showError('Backend server is not running. Please start it with: python app.py');
+            showError('Backend API is currently unavailable.');
         }
     } catch (error) {
-        showError('⚠️ Backend server is not running. Start it with: python app.py');
+        showError('Backend API is currently unavailable.');
     }
 });
