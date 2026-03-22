@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 
 from dotenv import load_dotenv
-from flask import Flask, jsonify, redirect, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 
 load_dotenv()
