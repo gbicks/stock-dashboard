@@ -187,19 +187,25 @@ def mock_history_response(ticker, days, provider_error):
 @app.route('/stocks')
 @app.route('/stocks/')
 def serve_index():
-    return send_from_directory(BASE_DIR, 'index.html')
+    response = send_from_directory(BASE_DIR, 'index.html')
+    response.headers['Cache-Control'] = 'no-store, max-age=0'
+    return response
 
 
 @app.route('/styles.css')
 @app.route('/stocks/styles.css')
 def serve_stylesheet():
-    return send_from_directory(BASE_DIR, 'styles.css')
+    response = send_from_directory(BASE_DIR, 'styles.css')
+    response.headers['Cache-Control'] = 'no-store, max-age=0'
+    return response
 
 
 @app.route('/script.js')
 @app.route('/stocks/script.js')
 def serve_script():
-    return send_from_directory(BASE_DIR, 'script.js')
+    response = send_from_directory(BASE_DIR, 'script.js')
+    response.headers['Cache-Control'] = 'no-store, max-age=0'
+    return response
 
 
 @app.route('/api/stock/<ticker>', methods=['GET'])
