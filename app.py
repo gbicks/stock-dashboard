@@ -158,14 +158,10 @@ def mock_history_response(ticker, days, provider_error):
 
 
 @app.route('/')
+@app.route('/stocks')
 @app.route('/stocks/')
 def serve_index():
     return send_from_directory(BASE_DIR, 'index.html')
-
-
-@app.route('/stocks')
-def redirect_stocks_no_slash():
-    return redirect('/stocks/', code=308)
 
 
 @app.route('/styles.css')

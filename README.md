@@ -33,7 +33,7 @@ This project is set up to deploy as a single Render web service.
 5. Preferred API routes are under `/api/*`.
 
 Legacy compatibility:
-- `/stocks/` remains available to avoid redirect loops from previously cached `308` responses
+- `/stocks` and `/stocks/` are both served directly to avoid proxy/cache edge cases around slash redirects
 - `/stocks/api/*` remains available alongside `/api/*` for the same reason
 
 ## API
